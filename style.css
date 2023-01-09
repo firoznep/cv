@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.h-item-1 {
+  flex-grow: 2;
+}
+
+main {
+  margin: 0.5rem;
+}
+
+section {
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(0, 204, 255);
+  font-size: 3rem;
+}
+
+.hdrhr {
+  border: 1px solid rgb(0, 204, 255);
+  width: 50%;
+}
+
+header p {
+  text-align: center;
+  line-height: 0.3;
+}
+
+.mypic {
+  transition: transform 0.3s;
+}
+
+.mypic:hover {
+  transform: translatey(-0.1rem) scale(1.1);
+  /* box-shadow: 3px 8px 10px rgb(0, 204, 255); */
+  cursor: pointer;
+}
+
+h2 {
+  color: rgb(0, 204, 255);
+  margin-top: 2rem;
+}
+
+.periods {
+  margin-left: -2rem;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+/* .portimg {
+  height: 28rem;
+} */
+
+/* .dl {
+  float: right;
+} */
+
+.per-info {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin: 0 2.5rem;
+  font-size: small;
+}
+
+footer :last-child {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  header {
+    margin-right: 50px;
+  }
+}

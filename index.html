@@ -1,274 +1,191 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Myresume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Myresume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-
-
-    }
-
-    body {
-      margin: 2rem;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    header {
-      position: relative;
-    }
-
-    section {
-      font-size: 1.5rem;
-    }
-
-    h1 {
-      font-family: sans-serif;
-      text-align: center;
-      color: rgb(0, 204, 255);
-      font-size: 3rem;
-    }
-
-    .hdrhr {
-      border: 2px solid rgb(0, 204, 255);
-      width: 50%;
-    }
-
-    header p {
-      text-align: center;
-      line-height: 0.3;
-    }
-
-    .mypic {
-      position: absolute;
-      width: 8rem;
-      top: 0;
-      right: 5rem;
-      box-shadow: 1px 3px 5px rgb(0, 204, 255);
-      transition: transform 0.3s;
-    }
-
-    .mypic:hover {
-      transform: translatey(-0.2rem) scale(1.2);
-      box-shadow: 3px 8px 10px rgb(0, 204, 255);
-      cursor: pointer;
-    }
-
-    h2 {
-      color: rgb(0, 204, 255);
-      margin-top: 2rem;
-    }
-
-    .periods {
-      margin-left: -2rem;
-      font-size: 0.8rem;
-      color: grey;
-    }
-
-    .portimg {
-      height: 28rem;
-    }
-
-    .dl {
-      float: right;
-    }
-
-    footer {
-      margin: 0 10rem;
-    }
-
-    footer :last-child {
-      text-align: center;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>Firoz Miya</h1>
-    <hr class="hdrhr" />
-    <p>Doha, QATAR</p>
-    <p> +974-66738160</p>
-    <p>
-      <a href="mailto:firoz.thekhan@gmail.com">nep.firoz.m@gmail.com</a>
-    </p>
-    <p>
-      WebPage: <a style="color: brown; font-size: large; font-weight: bold;"
-        href="https://firoznep.github.io/cv">firoznep.github.io/cv</a>
-    </p>
-
-    <img class="mypic" src="pic.png" alt="My Photo" />
-  </header>
-
-  <!-- SKILLS -->
-  <main>
-    <section class="skills">
-      <h2>Skills</h2>
-      <ol>
-        <li>
-          created Static and dynamic websites using vanilla js and react library.
-        </li>
-        <li>
-          Front-End Developer
-          <ul>
-            <li>HTML, CSS, Bootstrap, JavaScript etc...</li>
-          </ul>
-
-        </li>
-        <li>
-          FraveWork and library
-          <ul>
-            <li>React js</li>
-          </ul>
-        </li>
-        <li>
-          Programming Language
-          <ul>
-            <li>Advanced level-JavaScript</li>
-            <li>Intermediate level-JAVA</li>
-            <li>Intermediate level-PYTHON</li>
-          </ul>
-        </li>
-        <li>
-          Microsoft Office: -
-          <ul>
-            <li>Word, excel, PowerPoint, Outlook</li>
-          </ul>
-        </li>
-
-        <li>Desktop computers and laptops repair and troubleshooting.</li>
-        <li>Install softwares and operating systems.</li>
-        <li>Strong communication skills.</li>
-        <li>Written and oral communication.</li>
-        <li>Qatari light vehicle driving licence.</li>
-
-      </ol>
-    </section>
-    <hr />
-    <!--Work History-->
-    <section>
-      <div>
-        <h2>Work history</h2>
-        <p class="periods">2014-2018</p>
-        <p>Data Entry| Armada (G.W.C.) warehouse Shanaiyah, Doha, QATAR</p>
-        <ul>
-          <li>Produced monthly reports using company's software.</li>
-          <li>Added new material to file records and created new records.</li>
-          <li>Corresponded with clients through outlook or telephone.</li>
-          <li>
-            Reduced overhead by taking on more responsibility with creative
-            team.
-          </li>
-          <li>
-            Restored data, operating systems, files, documents and drivers.
-          </li>
-          <li>
-            Resolved computer hardware and software, printing, installation,
-            email and operating systems issues.
-          </li>
-        </ul>
+  <body>
+    <header>
+      <div class="h-item-1">
+        <h1>Firoz Miya</h1>
+        <hr class="hdrhr" />
+        <p>Doha, QATAR</p>
+        <p>+974-66738160</p>
+        <p>
+          <a href="mailto:firoz.thekhan@gmail.com">nep.firoz.m@gmail.com</a>
+        </p>
+        <p>
+          WebPage:
+          <a
+            style="color: brown; font-size: large; font-weight: bold"
+            href="https://firoznep.github.io/cv"
+            >firoznep.github.io/cv</a
+          >
+        </p>
       </div>
-    </section>
-    <hr />
-    <!-- Education and Language -->
-    <section>
-      <h2>Education</h2>
-      <h3>High School</h3>
-      <p>
-        From: Shree Sharda Secondary High School, Birgunj, Central Development
-        Region, Nepal
-      </p>
-      <h3>College</h3>
-      <p>From: Thakur Ram Campus Birgunj Nepal</p>
+      <div>
+        <img class="mypic" src="pic.png" alt="My Photo" height="240px" />
+      </div>
+    </header>
 
+    <!-- SKILLS -->
+    <main>
+      <section class="skills">
+        <h2>Skills</h2>
+        <ol>
+          <li>
+            Creating Static and dynamic websites using vanilla js and react
+            library.
+          </li>
+          <li>
+            Front-End Developer
+            <ul>
+              <li>HTML, CSS, Bootstrap, JavaScript etc...</li>
+            </ul>
+          </li>
+          <li>
+            FrameWork and library
+            <ul>
+              <li>React js</li>
+            </ul>
+          </li>
+          <li>
+            Programming Language
+            <ul>
+              <li>Advanced level-JavaScript</li>
+              <li>Intermediate level-JAVA</li>
+              <li>Intermediate level-PYTHON</li>
+            </ul>
+          </li>
+          <li>
+            Microsoft Office: -
+            <ul>
+              <li>Word, excel, PowerPoint, Outlook</li>
+            </ul>
+          </li>
+
+          <li>Desktop computers and laptops repair and troubleshooting.</li>
+          <li>Installing softwares and operating systems.</li>
+          <li>Strong communication skills.</li>
+          <li>Written and oral communication.</li>
+          <li>Qatari driving licence.</li>
+        </ol>
+      </section>
       <hr />
-      <h2>Languages</h2>
-      <table>
-        <tr>
-          <th></th>
-          <th>Read</th>
-          <th>Write</th>
-          <th>Speak</th>
-        </tr>
-        <tr>
-          <td>English :-</td>
-          <td>&check;</td>
-          <td>&check;</td>
-          <td>&check;</td>
-        </tr>
-        <tr>
-          <td>Hindi :-</td>
-          <td>&check;</td>
-          <td>&check;</td>
-          <td>&check;</td>
-        </tr>
-        <tr>
-          <td>Nepali :-</td>
-          <td>&check;</td>
-          <td>&check;</td>
-          <td>&check;</td>
-        </tr>
-        <tr>
-          <td>Arabic :-</td>
-          <td>&check;</td>
-          <td>&check;</td>
-          <td>&check;</td>
-        </tr>
-        <tr>
-          <td>Urdu :-</td>
-          <td>&check;</td>
-          <td style="color: red;">&cross;</td>
-          <td>&check;</td>
-        </tr>
-      </table>
-    </section>
+      <!--Work History-->
+      <section class="work-his">
+        <div>
+          <h2>Work history</h2>
+          <p class="periods">2014-2018</p>
+          <p>Data Entry| Armada (G.W.C.) warehouse Shanaiyah, Doha, QATAR</p>
+          <ul>
+            <li>Produced monthly reports using company's software.</li>
+            <li>Added new material to file records and created new records.</li>
+            <li>Corresponded with clients through outlook or telephone.</li>
+            <li>
+              Reduced overhead by taking on more responsibility with creative
+              team.
+            </li>
+            <li>
+              Restored data, operating systems, files, documents and drivers.
+            </li>
+            <li>
+              Resolved computer hardware and software, printing, installation,
+              email and operating systems issues.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <hr />
+      <!-- Education and Language -->
+      <section class="edu-lang">
+        <h2>Education</h2>
+        <h3>High School</h3>
+        <p>
+          From: Shree Sharda Secondary High School, Birgunj, Central Development
+          Region, Nepal
+        </p>
+        <h3>College</h3>
+        <p>From: Thakur Ram Campus Birgunj Nepal</p>
+
+        <hr />
+        <h2>Languages</h2>
+
+        <table>
+          <tr>
+            <th></th>
+            <th>Read</th>
+            <th>Write</th>
+            <th>Speak</th>
+          </tr>
+          <tr>
+            <td>English :-</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+          </tr>
+          <tr>
+            <td>Hindi :-</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+          </tr>
+          <tr>
+            <td>Nepali :-</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+          </tr>
+          <tr>
+            <td>Arabic :-</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+          </tr>
+          <tr>
+            <td>Urdu :-</td>
+            <td>&check;</td>
+            <td style="color: red">&cross;</td>
+            <td>&check;</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+
+      <!-- Personal Detail -->
+      <section class="per-info">
+        <h2>Personal Information</h2>
+
+        <span> <strong> name:-</strong> Firoz Miya </span>
+        <span> <strong> Sex:-</strong> Male </span>
+        <span> <strong>Date Of Birth:-</strong> 9-Aug-1986 </span>
+        <span> <strong>Address:-</strong> Jeetpur/Simara, NEPAL </span>
+        <span> <strong>Contact:-</strong> +97466738160, +977-9819257690 </span>
+        <span> <strong> Marital Status:- </strong> Married </span>
+        <span> <strong> Religion:- </strong> Muslim </span>
+        <span>
+          <strong> Sports Activities:- </strong> Marathon,
+          cricket,football,Chess
+        </span>
+      </section>
+    </main>
+
+    <!-- <hr style="clear: both;" /> -->
+
     <hr />
-    <!-- Personal Detail -->
-    <section>
-      <h2>Personal Information</h2>
-      <pre>
-Name               :- Firoz Miya
-Sex                :- Male
-Date of birth      :- 9-Aug-1986
-Address            :- Jeetpur/Simara,  NEPAL
-Contact            :- +97466738160, +977-9819257690, 
-Marital Status     :- Married
-Religion           :- Muslim
-Sports Activities  :- Running Marathon, Love to play chess, cricket, football.
-</pre>
-
-
-
-
-
-
-    </section>
-
-  </main>
-
-  <!-- <hr style="clear: both;" /> -->
-  <footer>
-    <p>
-      I would appreciate the opportunity to meet and discuss my qualifications
-      and answer any questions you may have. I look forward to hearing from
-      you. If selected for the job, you will gain a well-organized employee
-      who is willing to learn, strives to consistently produce quality work.
-    </p>
-    <p><em>Thank you for your time and consideration.</em></p>
-  </footer>
-</body>
-
+    <footer>
+      <p>
+        I would appreciate the opportunity to meet and discuss my qualifications
+        and answer any questions you may have. I look forward to hearing from
+        you. If selected for the job, you will gain a well-organized employee
+        who is willing to learn, strives to consistently produce quality work.
+      </p>
+      <p><em>Thank you for your time and consideration.</em></p>
+    </footer>
+  </body>
 </html>
