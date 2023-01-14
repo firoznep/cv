@@ -19,12 +19,9 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
-}
-.h-item-1 {
-  flex-grow: 2;
 }
 
 main {
@@ -37,18 +34,16 @@ section {
 
 h1 {
   font-family: sans-serif;
-  text-align: center;
-  color: rgb(0, 204, 255);
+  color: #007997;
   font-size: 3rem;
 }
 
 .hdrhr {
-  border: 1px solid rgb(0, 204, 255);
-  width: 50%;
+  border: 1px solid #007997;
 }
 
-header p {
-  text-align: center;
+header p,
+header .age-display {
   line-height: 0.3;
 }
 
@@ -58,34 +53,33 @@ header p {
 
 .mypic:hover {
   transform: translatey(-0.1rem) scale(1.1);
-  /* box-shadow: 3px 8px 10px rgb(0, 204, 255); */
   cursor: pointer;
 }
 
 h2 {
-  color: rgb(0, 204, 255);
+  color: #007997;
   margin-top: 2rem;
 }
-
-.periods {
-  margin-left: -2rem;
-  font-size: 0.8rem;
-  color: grey;
-}
-
-/* .portimg {
-  height: 28rem;
-} */
-
-/* .dl {
-  float: right;
-} */
 
 .per-info {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
+/* Age calc */
+
+.ag {
+  font-size: large;
+  color: #007997;
+}
+
+sub {
+  font-size: smaller;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* footer-------------- */
 footer {
   margin: 0 2.5rem;
   font-size: small;
@@ -96,8 +90,11 @@ footer :last-child {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   header {
     margin-right: 50px;
   }
+}
+
+@media screen and (max-width: 768px) {
 }
