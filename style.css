@@ -49,11 +49,13 @@ header .age-display {
 
 .mypic {
   transition: transform 0.3s;
+  border-radius: 1rem;
 }
 
 .mypic:hover {
-  transform: translatey(-0.1rem) scale(1.1);
+  transform: translatey(1rem) scale(1.1);
   cursor: pointer;
+  box-shadow: 0.2rem 0.5rem 1rem #007997;
 }
 
 h2 {
