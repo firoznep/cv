@@ -4,42 +4,24 @@ const yrElm = document.querySelector(".yr");
 const mntElm = document.querySelector(".mnt");
 const dsElm = document.querySelector(".ds");
 
-// const ageObj = {
-//   todayIs: new Date(),
-//   birthDay: new Date("1986-01-09"),
-//   epochTime: new Date("1970-01-01"),
-//   diffAge: function () {
-//     return new Date(this.todayIs - this.birthDay);
-//   },
-// };
+const d_bt = document.querySelector("#bdt");
 
-// const ageCalc = (ao) => {
-//   const ageInYr = ao.diffAge().getFullYear() - ao.epochTime.getFullYear();
-//   const ageInMnt = ao.diffAge().getUTCMonth() - ao.epochTime.getUTCMonth();
-//   const ageInDay = ao.diffAge().getUTCDate() - ao.epochTime.getUTCDate();
-
-//   yrElm.textContent = ageInYr;
-//   mntElm.textContent = ageInMnt;
-//   dsElm.textContent = ageInDay;
-// };
-
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
-// --------------------------====================================++++++++++++++++++++++++++++++++
 // --------------------------====================================++++++++++++++++++++++++++++++++
 // --------------------------====================================++++++++++++++++++++++++++++++++
 // --------------------------====================================++++++++++++++++++++++++++++++++
 // --------------------------====================================++++++++++++++++++++++++++++++++
 // ageCalc(ageObj);
+// days in month
+const MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+let BIRTHDAY = new Date("1986-08-09");
+
+d_bt.addEventListener("change", () => {
+  BIRTHDAY = new Date(d_bt.value);
+  ageCalc();
+});
 
 const ageCalc = () => {
-  // birthday and latest date
-  const BIRTHDAY = new Date("1986-08-09");
   const TODAY = new Date();
 
   // get year, month and days from birthday's date
@@ -51,9 +33,6 @@ const ageCalc = () => {
   let yrOfToday = TODAY.getFullYear();
   let mntOfToday = TODAY.getMonth() + 1;
   let dsOfToday = TODAY.getDate();
-
-  // days in month
-  const MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   // if birthday's month or day is greater than today's month or day
   if (dsOfBirth > dsOfToday) {

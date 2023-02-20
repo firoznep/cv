@@ -72,14 +72,24 @@ h2 {
 
 /* Age calc */
 
-.ag {
+.ag,
+.wpg {
   font-size: large;
-  color: #007997;
+  font-style: italic;
+  color: brown;
 }
 
 sub {
   font-size: smaller;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#bdt {
+  border: none;
+  font-size: large;
+  font-style: italic;
+  color: brown;
+  outline: 0;
 }
 
 /* footer-------------- */
