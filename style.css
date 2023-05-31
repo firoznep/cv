@@ -114,6 +114,13 @@ footer :last-child {
 
 /* myPic style */
 
-#myPic-container {
+.none-active {
   transition: all 2s;
+  rotate: -2deg;
+}
+
+.active {
+  rotate: 2deg;
+  scale: 1.02;
+  transform: translateX(15px);
 }

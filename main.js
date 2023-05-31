@@ -58,17 +58,8 @@ ageCalc();
 
 // image animation
 
-const myImg = document.getElementById("myPic-container");
+const myPic = document.getElementById("myPic-container");
 
 setInterval(() => {
-  // const cWidth = document.body.scrollWidth;
-  // const cHeight = document.body.scrollHeight;
-
-  const cWidth = 400;
-  const cHeight = 800;
-
-  const pageWidth = Math.round(cWidth * Math.random());
-  const pageHeight = Math.round(cHeight * Math.random());
-
-  myImg.style.transform = `translate(${pageWidth}px, ${pageHeight}px)`;
-}, 3000);
+  myPic.classList.toggle("active");
+}, 2000);
