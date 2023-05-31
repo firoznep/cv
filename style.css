@@ -50,7 +50,7 @@ header .age-display {
 
 .mypic {
   transition: transform 0.3s;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .mypic:hover {
