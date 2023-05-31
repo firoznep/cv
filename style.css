@@ -111,3 +111,9 @@ footer :last-child {
 
 @media screen and (max-width: 768px) {
 }
+
+/* myPic style */
+
+#myPic-container {
+  transition: all 2s;
+}
