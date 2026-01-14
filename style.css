@@ -86,7 +86,7 @@ header {
 }
 
 .card {
-  padding: 2rem;
+  padding: 1rem 2rem;
 
   .card-title {
     color: var(--color-oranged);
