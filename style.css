@@ -1,126 +1,124 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  --color-oranged: #ff4500;
+  letter-spacing: 0.08rem;
+}
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-html {
-  font-size: 1rem;
-}
-
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #fbfafa;
+  background-color: #f3f3f3;
+}
+.body-content {
+  width: 1080px;
+  min-height: 100vh;
+  margin: 0 auto;
+  /* background-color: rgb(0, 156, 60); */
+  overflow: hidden;
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
-}
-
-main {
-  margin: 0.5rem;
-}
-
-section {
-  font-size: 1.1rem;
-}
-
-h1 {
-  font-family: sans-serif;
-  color: #007997;
-  font-size: 3rem;
-}
-
-.hdrhr {
-  border: 1px solid #007997;
-}
-
-header p,
-header .age-display {
-  line-height: 0.3;
-}
-
-.mypic {
-  transition: transform 0.3s;
-  border-radius: 2rem;
-}
-
-.mypic:hover {
-  transform: translatey(1rem) scale(1.1);
-  cursor: pointer;
-  box-shadow: 0.2rem 0.5rem 1rem #007997;
-}
-
-h2 {
-  color: #007997;
-  margin-top: 2rem;
-}
-
-.per-info {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-/* Age calc */
-
-.ag,
-.wpg {
-  font-size: large;
-  font-style: italic;
-  color: brown;
-}
-
-sub {
-  font-size: smaller;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-#bdt {
-  border: none;
-  font-size: large;
-  font-style: italic;
-  color: brown;
-  outline: 0;
-}
-
-/* footer-------------- */
-footer {
-  margin: 0 2.5rem;
-  font-size: small;
-}
-
-footer :last-child {
-  text-align: center;
-  font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
-  header {
-    margin-right: 50px;
+  .header-content {
+    /* background: linear-gradient(to left top, #00687a, #00a2b8); */
+    opacity: 0.9;
+    color: var(--color-oranged);
+    text-align: right;
+    padding: 2rem;
+    letter-spacing: 0.08rem;
+    border-bottom: 2px solid #616161;
+    box-shadow: 1px 1px 10px gray;
   }
 }
 
-@media screen and (max-width: 768px) {
+.main-content {
+  /* background-color: rgb(90, 23, 73); */
+  width: inherit;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: space-between;
+
+  .seperator {
+    position: relative;
+    width: 80%;
+    height: 1px;
+    background-color: #646464;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    span {
+      position: absolute;
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: #575757;
+      border-radius: 50%;
+      top: -0.4rem;
+    }
+  }
+
+  aside {
+    width: 20rem;
+
+    .seperator {
+      margin-left: auto;
+      span {
+        right: -0.4rem;
+      }
+    }
+  }
+
+  main {
+    /* background-color: #c5ad22; */
+    width: 100%;
+    border-left: 1px solid gray;
+    .seperator {
+      span {
+        left: -0.4rem;
+      }
+    }
+  }
 }
 
-/* myPic style */
+.card {
+  padding: 2rem;
 
-.none-active {
-  transition: all 2s;
-  rotate: -2deg;
+  .card-title {
+    color: var(--color-oranged);
+    padding: 1rem 0;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+  }
+  .card-content {
+    padding: 0.5rem;
+  }
+  .card-label {
+    display: block;
+  }
+  .card-label-description {
+    /* color: #616161; */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .card-description {
+    padding: 0.5rem;
+    /* color: #616161; */
+  }
 }
 
-.active {
-  rotate: 2deg;
-  scale: 1.02;
-  transform: translateX(15px);
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
