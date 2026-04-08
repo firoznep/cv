@@ -781,7 +781,7 @@
                   architecture.
                 </li>
                 <li>
-                  Engineered <strong>20+ department-wise VLANs</strong> (HR,
+                  Engineered <strong>8+ department-wise VLANs</strong> (HR,
                   Finance, Engineering, IT, Executive, Guest) with 802.1Q
                   trunking, inter-VLAN routing, and ACL-based security policies.
                 </li>
@@ -795,10 +795,7 @@
                   <strong>SSL remote-access VPN</strong> for 100+ remote workers
                   with MFA enforcement.
                 </li>
-                <li>
-                  Set up <strong>PRTG / Zabbix network monitoring</strong> (200+
-                  nodes, SNMP v3) — reducing mean-time-to-detect issues by 60%.
-                </li>
+
                 <li>
                   Administered <strong>Windows Server 2019/2022</strong>: Active
                   Directory, Group Policy, DNS, DHCP, IIS — maintaining 99.9%
@@ -854,7 +851,7 @@
           </section>
 
           <section class="m-sec">
-            <h2 class="sec-title">Key Projects &amp; Achievements</h2>
+            <h2 class="sec-title">Key Projects</h2>
             <div class="proj-grid">
               <div class="proj-card">
                 <p class="proj-t">
@@ -863,34 +860,34 @@
                 </p>
                 <p>
                   Led end-to-end planning using a 3-tier hierarchy: Cisco
-                  Catalyst switches, ISR routers, FortiGate NGFW. Created 20+
+                  Catalyst switches, ISR routers, FortiGate NGFW. Created 8+
                   VLANs, 802.1Q trunks, DHCP scopes and inter-VLAN routing —
                   achieving near-zero downtime and full department isolation.
                 </p>
               </div>
+
               <div class="proj-card">
-                <p class="proj-t">Firewall Policy &amp; DMZ Architecture</p>
+                <p class="proj-t">
+                  CCTV Deployment & Maintenance –
+                  <span class="proj-tag">16+ Outlets</span>
+                </p>
                 <p>
-                  Designed DMZ zone using Cisco ASA/FortiGate to host
-                  public-facing servers while protecting internal resources.
-                  Authored ACL and NAT/PAT rule sets; conducted quarterly
-                  firewall security audits.
+                  Led end-to-end installation of CCTV systems across 16 retail
+                  outlets. Designed layouts, configured IP cameras/NVRs, and
+                  integrated with network infrastructure. Implemented preventive
+                  maintenance ensuring 95% uptime and rapid fault resolution.
+                  Delivered project on time and within budget, improving overall
+                  security visibility.
                 </p>
               </div>
+
               <div class="proj-card">
-                <p class="proj-t">VPN Infrastructure Rollout</p>
+                <p class="proj-t">Website & Web Application</p>
                 <p>
-                  Deployed site-to-site IPSec VPN between HQ and remote sites,
-                  plus IPSec VPN for 100+ remote employees with MFA enforcement
-                  and granular access control policies.
-                </p>
-              </div>
-              <div class="proj-card">
-                <p class="proj-t">Network Monitoring &amp; Alerting System</p>
-                <p>
-                  Implemented PRTG with SNMP v3 across 200+ nodes. Custom
-                  dashboards and threshold alerts reduced mean-time-to-detect
-                  network issues by 60% and improved SLA compliance.
+                  Built and hosted on-premises using HTML, CSS, JavaScript,
+                  Golang, PostgreSQL, Ubuntu Linux, and Let’s Encrypt; managed
+                  secure public and private access, ensuring reliability and
+                  scalability.
                 </p>
               </div>
             </div>
@@ -899,42 +896,6 @@
       </div>
       <footer></footer>
     </div>
-    <script>
-      window.addEventListener("load", function () {
-        var cv = document.getElementById("cv");
-        cv.style.opacity = "0";
-        cv.style.transform = "translateY(12px)";
-        cv.style.transition = "opacity 0.5s ease,transform 0.5s ease";
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            cv.style.opacity = "1";
-            cv.style.transform = "translateY(0)";
-          });
-        });
-        var els = document.querySelectorAll(".job,.proj-card,.ccna-row");
-        els.forEach(function (el, i) {
-          el.style.opacity = "0";
-          el.style.transform = "translateX(-6px)";
-          el.style.transition =
-            "opacity 0.35s ease " +
-            (0.15 + i * 0.035) +
-            "s,transform 0.35s ease " +
-            (0.15 + i * 0.035) +
-            "s";
-          setTimeout(function () {
-            el.style.opacity = "1";
-            el.style.transform = "translateX(0)";
-          }, 100);
-        });
-      });
-      window.addEventListener("beforeprint", function () {
-        document.querySelectorAll("*").forEach(function (el) {
-          el.style.transition = "none";
-          el.style.animation = "none";
-          el.style.opacity = "1";
-          el.style.transform = "none";
-        });
-      });
-    </script>
+  
   </body>
 </html>
