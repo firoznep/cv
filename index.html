@@ -3,284 +3,938 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Firoz Miya – CCNA Certified Network Engineer and System Administrator with 8+ years experience."
     />
+    <meta
+      name="keywords"
+      content="CCNA, Network Engineer, System Administrator, Cisco, Firewall, VLAN, VPN, OSPF, Active Directory, Windows Server, Linux, VMware, IT Support, Network Security, Doha Qatar"
+    />
+    <title>
+      Firoz Miya | Network Engineer | System Administrator | CCNA Certified
+    </title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #d9e2ec;
+      }
+      :root {
+        --navy: #0d1b2a;
+        --mid-navy: #1b3a5c;
+        --teal: #00b4d8;
+        --teal-dk: #0096b7;
+        --teal-lt: #90e0ef;
+        --off-white: #f0f4f8;
+        --lt-gray: #d9e2ec;
+        --med-gray: #627d98;
+        --dk-gray: #334e68;
+        --text: #1a2e42;
+        --white: #ffffff;
+        --gold: #ffd166;
+        --sb-w: 250px;
+      }
+      html {
+        font-size: 1.2rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body {
+        background: #dde3ea;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text);
+        line-height: 1.5;
+      }
 
-    <title>Firoz CV</title>
+      /* PRINT BAR */
+      .print-bar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: var(--navy);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 9px 20px;
+      }
+      .btn-print {
+        background: var(--teal);
+        color: var(--navy);
+        border: none;
+        border-radius: 5px;
+        padding: 7px 20px;
+        font-weight: 700;
+        font-size: 0.88rem;
+        cursor: pointer;
+      }
+      .btn-print:hover {
+        background: var(--teal-lt);
+      }
+      .print-tip {
+        color: var(--med-gray);
+        font-size: 0.78rem;
+      }
+
+      /* CV PAGE */
+      .cv-page {
+        width: 1080px;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: var(--white);
+        box-shadow: 0 6px 40px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* HEADER */
+      .cv-header {
+        background: var(--navy);
+        padding: 20px 26px 18px;
+        border-bottom: 3px solid var(--teal);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .hdr-left {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .hdr-right {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        padding-top: 2px;
+      }
+      .cv-name {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+      .cv-role {
+        font-size: 0.85rem;
+        color: var(--teal-lt);
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+      .cv-role {
+        font-size: xx-large;
+      }
+      .hdr-contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 16px;
+      }
+      .ci {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.76rem;
+        color: var(--off-white);
+      }
+      .ci svg {
+        width: 12px;
+        height: 12px;
+        fill: var(--teal);
+        flex-shrink: 0;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 0.69rem;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+      }
+      .badge-logo {
+        width: 64px;
+        height: 64px;
+        background-color: #0096b7;
+        border-radius: 50%;
+      }
+      .badge-main {
+        background: var(--teal);
+        color: var(--navy);
+      }
+      .badge-sub {
+        background: transparent;
+        color: var(--teal-lt);
+        border: 1px solid var(--teal);
+      }
+
+      /* BODY */
+      .cv-body {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      /* SIDEBAR */
+      .cv-sidebar {
+        width: var(--sb-w);
+        flex: 0 0 var(--sb-w);
+        background: var(--mid-navy);
+        padding: 16px 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .sb-sec {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .sb-sec:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      .sb-title {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--teal);
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        border-bottom: 1.5px solid var(--teal);
+      }
+      .sk-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .sk-list li {
+        font-size: 0.71rem;
+        color: var(--off-white);
+        line-height: 1.4;
+        padding-left: 10px;
+        position: relative;
+      }
+      .sk-list li::before {
+        content: "▸";
+        color: var(--teal);
+        position: absolute;
+        left: 0;
+        top: 1px;
+        font-size: 0.6rem;
+      }
+      .ct-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .ct-list li {
+        display: flex;
+        gap: 6px;
+        font-size: 0.7rem;
+        color: var(--off-white);
+        line-height: 1.4;
+      }
+      .ct-list .star {
+        color: var(--gold);
+        flex-shrink: 0;
+      }
+      .ct-list strong {
+        display: block;
+        color: var(--white);
+        font-size: 0.72rem;
+      }
+      .la-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .la-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.71rem;
+      }
+      .la-name {
+        color: var(--off-white);
+      }
+      .la-lvl {
+        background: rgba(0, 180, 216, 0.2);
+        color: var(--teal-lt);
+        font-size: 0.63rem;
+        font-weight: 700;
+        padding: 1px 7px;
+        border-radius: 10px;
+      }
+      .edu-deg {
+        font-size: 0.71rem;
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.4;
+        margin-bottom: 3px;
+      }
+      .edu-sch {
+        font-size: 0.68rem;
+        color: var(--teal-lt);
+        line-height: 1.3;
+      }
+      .av-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .av-list li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+      }
+      .av-list li span {
+        color: var(--med-gray);
+      }
+      .av-list li strong {
+        color: var(--teal-lt);
+        font-weight: 600;
+      }
+
+      /* MAIN */
+      .cv-main {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 16px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .m-sec {
+        padding-bottom: 13px;
+        margin-bottom: 13px;
+        border-bottom: 1px solid var(--lt-gray);
+      }
+      .m-sec:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      .sec-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--mid-navy);
+        padding-bottom: 5px;
+        border-bottom: 2px solid var(--teal);
+        margin-bottom: 10px;
+      }
+      .summary {
+        font-size: 0.8rem;
+        color: var(--dk-gray);
+        line-height: 1.65;
+        text-align: justify;
+        margin-bottom: 9px;
+      }
+      .summary strong {
+        color: var(--navy);
+      }
+      .kw-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .kw-tags span {
+        background: var(--off-white);
+        color: var(--mid-navy);
+        font-size: 0.63rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 3px;
+        border: 1px solid var(--lt-gray);
+      }
+
+      /* JOB */
+      .job {
+        margin-bottom: 13px;
+      }
+      .job:last-child {
+        margin-bottom: 0;
+      }
+      .job-hdr {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+      .job-left {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .job-t {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.2;
+        margin-bottom: 2px;
+      }
+      .job-co {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--teal-dk);
+      }
+      .job-right {
+        flex: 0 0 auto;
+        text-align: right;
+      }
+      .job-date {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--mid-navy);
+        background: var(--off-white);
+        border: 1px solid var(--lt-gray);
+        padding: 2px 7px;
+        border-radius: 3px;
+        white-space: nowrap;
+        margin-bottom: 2px;
+      }
+      .job-loc {
+        display: block;
+        font-size: 0.67rem;
+        color: var(--med-gray);
+      }
+      .job-ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .job-ul li {
+        font-size: 0.77rem;
+        color: var(--dk-gray);
+        line-height: 1.55;
+        padding-left: 13px;
+        position: relative;
+      }
+      .job-ul li::before {
+        content: "▸";
+        color: var(--teal-dk);
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 0.6rem;
+      }
+      .job-ul strong {
+        color: var(--navy);
+      }
+
+      /* PROJECTS */
+      .proj-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .proj-card {
+        background: var(--off-white);
+        border-left: 3px solid var(--teal);
+        padding: 7px 11px;
+        border-radius: 0 4px 4px 0;
+      }
+      .proj-t {
+        font-size: 0.81rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 3px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .proj-tag {
+        background: var(--teal);
+        color: var(--navy);
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: 10px;
+      }
+      .proj-card p {
+        font-size: 0.74rem;
+        color: var(--dk-gray);
+        line-height: 1.55;
+      }
+
+      /* CCNA */
+      .ccna-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .ccna-row {
+        display: flex;
+        gap: 7px;
+        font-size: 0.76rem;
+        color: var(--dk-gray);
+        line-height: 1.5;
+        padding: 3px 0;
+        border-bottom: 1px dotted var(--lt-gray);
+      }
+      .ccna-row:last-child {
+        border-bottom: none;
+      }
+      .ccna-chk {
+        color: var(--teal-dk);
+        font-weight: 700;
+        flex-shrink: 0;
+        font-size: 0.8rem;
+      }
+      .ccna-row strong {
+        color: var(--navy);
+      }
+
+      /* PRINT */
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 0;
+        }
+        html,
+        body {
+          background: white !important;
+        }
+        .print-bar {
+          display: none !important;
+        }
+        .cv-page {
+          width: 210mm;
+          margin: 0 !important;
+          box-shadow: none !important;
+        }
+      }
+
+      /* MOBILE */
+      @media screen and (max-width: 740px) {
+        .cv-page {
+          width: 100%;
+          margin: 0;
+          box-shadow: none;
+        }
+        .cv-header {
+          flex-direction: column;
+        }
+        .hdr-right {
+          align-self: flex-start;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .cv-body {
+          flex-direction: column;
+        }
+        .cv-sidebar {
+          width: 100%;
+          flex: none;
+        }
+      }
+      footer {
+        width: 100%;
+        height: 5px;
+        background-color: #627d98;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <!-- MAIN CONTAINER -->
-      <div class="body-content">
-        <!-- HEADER -->
-        <header>
-          <div class="header-content">
-            <h1>SYSTEM ADMINISTRATOR</h1>
-            <h3 style="letter-spacing: 0.3rem">Firoz Miya</h3>
+    <div class="cv-page" id="cv">
+      <!-- HEADER -->
+      <header class="cv-header">
+        <div class="hdr-left">
+          <h1 class="cv-name">Firoz Miya</h1>
+          <p class="cv-role">Network Engineer | System Administrator</p>
+          <div class="hdr-contacts">
+            <span class="ci">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                />
+              </svg>
+              +974 66738160 &nbsp;|&nbsp; +974 30038681
+            </span>
+            <span class="ci">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              firoz.thekhan@gmail.com
+            </span>
+            <span class="ci">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                />
+              </svg>
+              Doha, Qatar
+            </span>
+            <span class="ci">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                />
+              </svg>
+              Nepal
+            </span>
           </div>
-        </header>
-
-        <!-- CONTENT -->
-        <div class="main-content">
-          <!-- ASIDE -->
-          <aside>
-            <!-- CONTACT -->
-            <div class="card">
-              <h2 class="card-title">PERSONAL INFORMATION</h2>
-              <div class="card-content">
-                <strong class="card-label">Phone</strong>
-                <span class="card-label-description">974 66738160</span><br />
-                <span class="card-label-description">974 30038681</span>
-              </div>
-              <div class="card-content">
-                <strong class="card-label">Email</strong>
-                <span class="card-label-description"
-                  >firoz.thekhan@gmail.com</span
-                >
-              </div>
-              <div class="card-content">
-                <strong class="card-label">Current Address</strong>
-                <span class="card-label-description">Doha, Qatar</span>
-              </div>
-              <div class="card-content">
-                <strong class="card-label">Country</strong>
-                <span class="card-label-description">Nepal</span>
-              </div>
-              <div class="card-content">
-                <strong class="card-label">Date of Birth</strong>
-                <span class="card-label-description">09-Aug-1986</span>
-              </div>
-            </div>
-            <!-- SEPERATOR -->
-            <div class="seperator">
-              <span></span>
-            </div>
-
-            <!-- CORE SKILL -->
-            <div class="card">
-              <h2 class="card-title">CORE SKILL</h2>
-              <div class="card-content" style="margin-left: 1rem">
-                <ul class="card-label-description">
-                  <li>Linux</li>
-                  <li>Windows NT</li>
-                  <li>JavaScript</li>
-                  <li>Python</li>
-                  <li>Golang</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>React/NextJS</li>
-                  <li>SQL</li>
-                  <li>Git</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- CERTIFICATION -->
-            <div class="card">
-              <h2 class="card-title">CERTIFICATION</h2>
-              <div class="card-content">
-                <ol class="card-description">
-                   <li>
-                    <a href="https://cp.certmetrics.com/cisco/en/public/verify/credential/c97ba050da874113ab05d8d4f684d264" target="_blank"
-                      >Cisco Certified Network Associate (CCNA)</a
-                    >
-                  </li>
-                  <br/>
-                  <li>
-                    <a
-                      href="https://coursera.org/verify/professional-cert/1WUUAJH8G9K1"
-                      target="_blank"
-                      >Google IT Professional Certificate</a
-                    >
-                  </li>
-                  <br />
-                  <li>
-                    <a
-                      href="https://www.credly.com/badges/a42158bb-0d10-422d-8348-c1a85db4ebf8"
-                      target="_blank"
-                      >Cisco Network Technician</a
-                    >
-                  </li>
-                  <br />
-                  <li>
-                    <a
-                      href="https://www.credly.com/badges/ca2d9aff-bd55-4d79-9cbb-2cc2054d468e"
-                      target="_blank"
-                      >Networking Devices and Initial Configuration</a
-                    >
-                  </li>
-                  <br />
-                  <li>
-                    <a
-                      href="https://www.credly.com/badges/4934c923-c989-4275-ade0-6709a502395a"
-                      target="_blank"
-                      >Cisco Networking Basics</a
-                    >
-                  </li>
-                
-                 
-                </ol>
-              </div>
-            </div>
-
-            <!-- LANGUAGE -->
-            <div class="card">
-              <h2 class="card-title">LANGUAGES</h2>
-              <div class="card-content">
-                <div><strong>English</strong> - <span> Expert</span></div>
-                <div><strong>Hindi</strong> - <span> Expert</span></div>
-                <div><strong>Urdu</strong> - <span> Expert</span></div>
-                <div><strong>Nepali</strong> - <span> Native</span></div>
-              </div>
-            </div>
-          </aside>
-
-          <!-- MAIN -->
-          <main>
-            <!-- SUMMARY -->
-            <div class="card">
-              <h2 class="card-title">SUMMARY</h2>
-              <p class="card-description">
-                <strong> System Administrator </strong> with 8+ years of
-                hands-on experience in managing system maintenance, server
-                infrastructure, and data center operations. Demonstrated success
-                in designing, deploying, and optimizing enterprise systems to
-                maximize uptime, strengthen security, and improve operational
-                efficiency. Skilled in monitoring, troubleshooting, and
-                implementing automation solutions that reduce downtime and
-                enhance performance. Proven ability to collaborate across teams,
-                streamline processes, and deliver reliable IT solutions that
-                support organizational growth and resilience. <br />
-                Seeking to contribute my technical skills and problem-solving
-                abilities in a dynamic work environment while continuously
-                growing my expertise in cloud computing, automation, and cyber
-                security.
-              </p>
-            </div>
-            <!-- SEPERATOR -->
-            <div class="seperator">
-              <span></span>
-            </div>
-
-            <!-- EXPERIENCE -->
-            <div class="card">
-              <h2 class="card-title">EXPERIENCE</h2>
-              <div class="card-content">
-                <h3 class="card-label">System Maintenance & Administration</h3>
-                <div class="card-label-description">
-                  <div class="flex-row">
-                    <span> Mesopotamia For General Contracting L.L.C </span>
-                    <div>
-                      <strong>Aug 2021 - Present</strong><br />
-                      <em>Doha, Qatar</em>
-                    </div>
-                  </div>
-                </div>
-                <ul class="card-label-description">
-                  <li>
-                    Administered Windows and Linux servers, ensuring 99.9%
-                    uptime through proactive monitoring and patch management.
-                  </li>
-                  <li>
-                    Implemented automated backup and recovery solutions,
-                    reducing data restoration time.
-                  </li>
-                  <li>
-                    Configured and maintained Active Directory, DNS, DHCP, and
-                    Group Policies to streamline user and resource management.
-                  </li>
-                  <li>Deployed and managed VMware/Hyper-V environments.</li>
-                  <li>
-                    Oversaw daily data center operations, including hardware
-                    installation, cabling, and environmental monitoring.
-                  </li>
-                  <li>
-                    Automated routine administrative tasks with PowerShell and
-                    Bash scripts
-                  </li>
-                  <li>
-                    Developed and maintained company websites by creating,
-                    updating, and managing content, while monitoring traffic and
-                    performance using JavaScript, React, Next.js, Golang and
-                    PostgreSQL.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- EXPERIENCE -->
-            <div class="card">
-              <div class="card-content">
-                <h3 class="card-label">System Administrator</h3>
-                <div class="card-label-description">
-                  <div class="flex-row">
-                    <span>Armada Retail Concept </span>
-                    <div>
-                      <strong>Mar 2016 - 2019</strong><br />
-                      <em>Doha, Qatar</em>
-                    </div>
-                  </div>
-                </div>
-                <ul class="card-label-description">
-                  <li>
-                    Maintaining & monitoring security systems, networks and
-                    servers.
-                  </li>
-                  <li>
-                    Provide technical support for both hardware and software
-                    issues.
-                  </li>
-                  <li>
-                    Handle user account management and access control,
-                    administer the Google Admin Console, install and configure
-                    network printers, and maintain Windows Server including
-                    updates, backups, and Active Directory.
-                  </li>
-                  <li>
-                    Handle ERP application support by providing real-time
-                    solutions to employees, troubleshooting issues promptly, and
-                    coordinating effectively with ERP developers to ensure
-                    smooth operations.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- SEPERATOR -->
-            <div class="seperator">
-              <span></span>
-            </div>
-
-            <!-- EDUCATION -->
-            <div class="card">
-              <h2 class="card-title">EDUCATION</h2>
-              <h4 class="card-label">Diploma in Computer Applications</h4>
-              <div class="card-label-description">
-                Birgunj Institute of Technology
-              </div>
-            </div>
-          </main>
         </div>
+        <div class="hdr-right">
+          <a
+            href="https://www.credly.com/badges/32f30435-f450-4a6b-8b60-90f600a7e8fe"
+            target="_blank"
+            ><img class="badge-logo" src="./ccna_sm.jpg" alt="ccna_sm_logo" />
+          </a>
+          <span class="badge badge-main">&#9733; CCNA Certified</span>
+          <!-- <span class="badge badge-sub">Google IT Professional</span> -->
+          <!-- <span class="badge badge-sub">Cisco Network Technician</span> -->
+          <span class="badge badge-sub">8+ Years Experience</span>
+        </div>
+      </header>
 
-        <!-- FOOTER -->
-        <footer style="font-size: small">
-          <!-- <div>
-            <em
-              >I’d love the chance to meet and talk more about how my experience
-              fits with what you’re looking for. I’m happy to answer any
-              questions you might have, and I’m excited about the possibility of
-              joining your team. If I’m selected, you’ll have someone who’s
-              organized, eager to learn, and committed to doing quality work
-              every day.</em
-            >
-          </div> -->
-        </footer>
+      <!-- BODY -->
+      <div class="cv-body">
+        <!-- SIDEBAR -->
+        <aside class="cv-sidebar">
+          <div class="sb-sec">
+            <h2 class="sb-title">Networking Skills</h2>
+            <ul class="sk-list">
+              <li>Cisco Routers &amp; Switches</li>
+              <li>Firewall Config (ASA / FortiGate)</li>
+              <li>VLAN Design &amp; 802.1Q Trunking</li>
+              <li>OSPF / EIGRP / BGP Routing</li>
+              <li>STP / RSTP / EtherChannel</li>
+              <li>NAT / PAT / ACLs</li>
+              <li>IP Subnetting &amp; IPv6</li>
+              <li>VPN – IPSec / SSL / GRE</li>
+              <li>Network Monitoring (SNMP)</li>
+              <li>TCP/IP &amp; OSI Model</li>
+              <li>Wireless LAN (WLAN / WLC)</li>
+              <li>DHCP / DNS / NTP</li>
+              <li>Wireshark / Packet Analysis</li>
+            </ul>
+          </div>
+
+          <div class="sb-sec">
+            <h2 class="sb-title">Dev &amp; Tooling</h2>
+            <ul class="sk-list">
+              <li>JavaScript / React / Next.js</li>
+              <li>Python / Golang / Bash</li>
+              <li>PostgreSQL / SQL</li>
+              <li>Git / REST APIs / JSON</li>
+              <li>GNS3 / EVE-NG / Packet Tracer</li>
+              <li>SolarWinds / pfSense</li>
+              <li>Microsoft 365 Admin</li>
+            </ul>
+          </div>
+
+          <div class="sb-sec">
+            <h2 class="sb-title">Certifications</h2>
+            <ul class="ct-list">
+              <li>
+                <span class="star">&#9733;</span
+                ><span
+                  ><strong>CCNA</strong>
+                  <a
+                    href="https://cp.certmetrics.com/cisco/en/public/verify/credential/c97ba050da874113ab05d8d4f684d264"
+                    target="_blank"
+                    >Cisco Certified Network Associate</a
+                  >
+                </span>
+              </li>
+              <li>
+                <span class="star">&#9733;</span>
+                <a
+                  href="https://www.credly.com/badges/2630e71e-f2a1-459e-b2d1-ac6b3f832d72"
+                  target="_blank"
+                >
+                  <span>Google IT Professional</span>
+                </a>
+              </li>
+              <li>
+                <span class="star">&#9733;</span
+                ><a
+                  href="https://www.credly.com/badges/a42158bb-0d10-422d-8348-c1a85db4ebf8"
+                  target="_blank"
+                  >Cisco Network Technician</a
+                >
+              </li>
+              <li>
+                <span class="star">&#9733;</span
+                ><a
+                  href="https://www.credly.com/badges/4934c923-c989-4275-ade0-6709a502395a"
+                  target="_blank"
+                  >Cisco Networking</a
+                >
+              </li>
+              <li>
+                <span class="star">&#9733;</span
+                ><a
+                  href="https://www.credly.com/badges/ca2d9aff-bd55-4d79-9cbb-2cc2054d468e"
+                  target="_blank"
+                  >Networking Devices &amp; Configuration</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="sb-sec">
+            <h2 class="sb-title">Languages</h2>
+            <ul class="la-list">
+              <li>
+                <span class="la-name">English</span
+                ><span class="la-lvl">Expert</span>
+              </li>
+              <li>
+                <span class="la-name">Hindi</span
+                ><span class="la-lvl">Expert</span>
+              </li>
+              <li>
+                <span class="la-name">Urdu</span
+                ><span class="la-lvl">Expert</span>
+              </li>
+              <li>
+                <span class="la-name">Nepali</span
+                ><span class="la-lvl">Native</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sb-sec">
+            <h2 class="sb-title">Education</h2>
+            <p class="edu-deg">Diploma in Computer Applications</p>
+            <p class="edu-sch">Birgunj Institute of Technology</p>
+          </div>
+
+          <div class="sb-sec">
+            <h2 class="sb-title">Availability</h2>
+            <ul class="av-list">
+              <li><span>Status</span><strong>Immediately</strong></li>
+              <li><span>Type</span><strong>Full-Time</strong></li>
+              <li><span>Location</span><strong>Doha, Qatar</strong></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="cv-main">
+          <section class="m-sec">
+            <h2 class="sec-title">Professional Summary</h2>
+            <p class="summary">
+              <strong>Network Engineer and System Administrator</strong>
+              with 8+ years of hands-on experience in enterprise network design,
+              firewall configuration, server infrastructure management, and
+              end-to-end IT operations. Designed and deployed a full-scale
+              corporate network for an
+              <strong>850-employee organisation</strong> — including Cisco
+              routers, multilayer switches, FortiGate/ASA firewalls, 20+
+              department-wise VLANs, OSPF routing, IPSec VPN, and PRTG
+              monitoring. Proven ability to deliver high-availability, secure,
+              and scalable IT environments that reduce downtime, strengthen
+              security posture, and support organisational growth.
+            </p>
+          </section>
+
+          <section class="m-sec">
+            <h2 class="sec-title">Professional Experience</h2>
+
+            <div class="job">
+              <div class="job-hdr">
+                <div class="job-left">
+                  <h3 class="job-t">
+                    Senior Network &amp; Systems Administrator
+                  </h3>
+                  <p class="job-co">
+                    Mesopotamia For General Contracting L.L.C
+                  </p>
+                </div>
+                <div class="job-right">
+                  <span class="job-date">Aug 2021 – Present</span>
+                  <span class="job-loc">Doha, Qatar</span>
+                </div>
+              </div>
+              <ul class="job-ul">
+                <li>
+                  Designed, deployed and manage the
+                  <strong>full enterprise network for 850 employees</strong> —
+                  Cisco ISR routers, Catalyst multilayer switches, and
+                  FortiGate/Cisco ASA NGFW in a 3-tier hierarchical
+                  architecture.
+                </li>
+                <li>
+                  Engineered <strong>20+ department-wise VLANs</strong> (HR,
+                  Finance, Engineering, IT, Executive, Guest) with 802.1Q
+                  trunking, inter-VLAN routing, and ACL-based security policies.
+                </li>
+                <li>
+                  Configured <strong>OSPF dynamic routing</strong> across all
+                  segments; implemented <strong>EtherChannel (LACP)</strong> and
+                  RSTP for zero-downtime failover.
+                </li>
+                <li>
+                  Deployed <strong>site-to-site IPSec VPN</strong> and
+                  <strong>SSL remote-access VPN</strong> for 100+ remote workers
+                  with MFA enforcement.
+                </li>
+                <li>
+                  Set up <strong>PRTG / Zabbix network monitoring</strong> (200+
+                  nodes, SNMP v3) — reducing mean-time-to-detect issues by 60%.
+                </li>
+                <li>
+                  Administered <strong>Windows Server 2019/2022</strong>: Active
+                  Directory, Group Policy, DNS, DHCP, IIS — maintaining 99.9%
+                  uptime.
+                </li>
+                <li>
+                  Managed Hyper-V, consolidating 12 physical servers and
+                  reducing hardware costs by ~30%.
+                </li>
+                <li>
+                  Automated admin tasks via PowerShell and Bash scripts — saving
+                  ~15 hours/month.
+                </li>
+                <li>
+                  Developed company web applications using JavaScript, React,
+                  Next.js, Golang and PostgreSQL.
+                </li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <div class="job-hdr">
+                <div class="job-left">
+                  <h3 class="job-t">IT &amp; System Administrator</h3>
+                  <p class="job-co">Armada Retail Concept</p>
+                </div>
+                <div class="job-right">
+                  <span class="job-date">Mar 2016 – 2019</span>
+                  <span class="job-loc">Doha, Qatar</span>
+                </div>
+              </div>
+              <ul class="job-ul">
+                <li>
+                  Maintained and monitored
+                  <strong>security systems, networks and servers</strong> across
+                  multiple retail locations.
+                </li>
+                <li>
+                  Administered <strong>Google Workspace</strong> for user/device
+                  management, access control and license governance.
+                </li>
+                <li>
+                  Managed Windows Server infrastructure:
+                  <strong>Active Directory</strong>, OS updates, backups and
+                  network printers.
+                </li>
+                <li>
+                  Provided Tier 1/2 technical support and
+                  <strong>ERP application incident management</strong>.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="m-sec">
+            <h2 class="sec-title">Key Projects &amp; Achievements</h2>
+            <div class="proj-grid">
+              <div class="proj-card">
+                <p class="proj-t">
+                  Enterprise Network Design &amp; Deployment
+                  <span class="proj-tag">850 Employees</span>
+                </p>
+                <p>
+                  Led end-to-end planning using a 3-tier hierarchy: Cisco
+                  Catalyst switches, ISR routers, FortiGate NGFW. Created 20+
+                  VLANs, 802.1Q trunks, DHCP scopes and inter-VLAN routing —
+                  achieving near-zero downtime and full department isolation.
+                </p>
+              </div>
+              <div class="proj-card">
+                <p class="proj-t">Firewall Policy &amp; DMZ Architecture</p>
+                <p>
+                  Designed DMZ zone using Cisco ASA/FortiGate to host
+                  public-facing servers while protecting internal resources.
+                  Authored ACL and NAT/PAT rule sets; conducted quarterly
+                  firewall security audits.
+                </p>
+              </div>
+              <div class="proj-card">
+                <p class="proj-t">VPN Infrastructure Rollout</p>
+                <p>
+                  Deployed site-to-site IPSec VPN between HQ and remote sites,
+                  plus IPSec VPN for 100+ remote employees with MFA enforcement
+                  and granular access control policies.
+                </p>
+              </div>
+              <div class="proj-card">
+                <p class="proj-t">Network Monitoring &amp; Alerting System</p>
+                <p>
+                  Implemented PRTG with SNMP v3 across 200+ nodes. Custom
+                  dashboards and threshold alerts reduced mean-time-to-detect
+                  network issues by 60% and improved SLA compliance.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
+      <footer></footer>
     </div>
+    <script>
+      window.addEventListener("load", function () {
+        var cv = document.getElementById("cv");
+        cv.style.opacity = "0";
+        cv.style.transform = "translateY(12px)";
+        cv.style.transition = "opacity 0.5s ease,transform 0.5s ease";
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            cv.style.opacity = "1";
+            cv.style.transform = "translateY(0)";
+          });
+        });
+        var els = document.querySelectorAll(".job,.proj-card,.ccna-row");
+        els.forEach(function (el, i) {
+          el.style.opacity = "0";
+          el.style.transform = "translateX(-6px)";
+          el.style.transition =
+            "opacity 0.35s ease " +
+            (0.15 + i * 0.035) +
+            "s,transform 0.35s ease " +
+            (0.15 + i * 0.035) +
+            "s";
+          setTimeout(function () {
+            el.style.opacity = "1";
+            el.style.transform = "translateX(0)";
+          }, 100);
+        });
+      });
+      window.addEventListener("beforeprint", function () {
+        document.querySelectorAll("*").forEach(function (el) {
+          el.style.transition = "none";
+          el.style.animation = "none";
+          el.style.opacity = "1";
+          el.style.transform = "none";
+        });
+      });
+    </script>
   </body>
 </html>
